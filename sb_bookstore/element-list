@@ -1,0 +1,10 @@
+com.example.sb_bookstore
+com.example.sb_bookstore.config
+com.example.sb_bookstore.constants
+com.example.sb_bookstore.controller
+com.example.sb_bookstore.domain
+com.example.sb_bookstore.exception
+com.example.sb_bookstore.mapper
+com.example.sb_bookstore.response
+com.example.sb_bookstore.service
+com.example.sb_bookstore.utils

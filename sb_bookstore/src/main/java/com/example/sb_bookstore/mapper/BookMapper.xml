@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.sb_bookstore.mapper.BookMapper">
+    <insert id="addBookReturnBookId" useGeneratedKeys="true" keyProperty="id" keyColumn="id"
+            parameterType="com.example.sb_bookstore.domain.Book">
+        insert into book(book_id,title,author,price,discount,image,book_concern,publish_date,brief,category_id)
+        values (#{bookId},#{title},#{author},#{price},#{discount},
+        #{image},#{bookConcern},#{publishDate},#{brief},#{categoryId})
+    </insert>
+    <select id="getNewBooks" >
+        select book.* from book ,newbook where book.book_id=newbook.book_id
+    </select>
+    <select id="getHotBooks"  >
+        select book.* from book,hotbook where book.book_id=hotbook.book_id
+    </select>
+    <select id="getTeachBooks"  >
+        select book.* from book,teachbook where book.book_id=teachbook.book_id
+    </select>
+</mapper>
